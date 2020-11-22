@@ -31,10 +31,10 @@ public class HandleTruthTest {
 
     private static String test(int num, TreeMap<Integer, Set<String>> expected, Queue key) {
         Set<String> set = new HashSet<>();
-        String text;
+        String msg;
         switch (num) {
             case 1:
-                text = "this is bad this is not bad it is not bad anymore";
+                msg = "this is bad this is not bad it is not bad anymore";
                 set = new HashSet<>();
                 set.add("this");
                 expected.put(2, set);
@@ -61,13 +61,13 @@ public class HandleTruthTest {
                 key.add(1);
                 break;
             case 2:
-                text = "dog";
+                msg = "dog";
                 set.add("dog");
                 expected.put(1, set);
                 key.add(1);
                 break;
             case 3:
-                text = "hi hi hi hi hi hi hi yes yes yes yes yes yes no no no";
+                msg = "hi hi hi hi hi hi hi yes yes yes yes yes yes no no no";
                 set = new HashSet<>();
                 set.add("hi");
                 expected.put(7, set);
@@ -82,7 +82,7 @@ public class HandleTruthTest {
                 key.add(3);
                 break;
             case 4:
-                text = "my dog likes to run and my other dog likes to walk and my fish likes to swim";
+                msg = "my dog likes to run and my other dog likes to walk and my fish likes to swim";
                 set = new HashSet<>();
                 set.add("my");
                 expected.put(3, set);
@@ -113,7 +113,7 @@ public class HandleTruthTest {
                 key.add(1);
                 break;
             case 5:
-                text = "hey hello hi bye good bye good night";
+                msg = "hey hello hi bye good bye good night";
                 set = new HashSet<>();
                 set.add("good");
                 expected.put(2, set);
@@ -131,9 +131,9 @@ public class HandleTruthTest {
                 key.add(1);
                 break;
             default:
-                text = " ";
+                msg = " ";
                 key.add(0);
         }
-        return text;
+        return msg;
     }
 }
