@@ -81,7 +81,37 @@ public class HandleTruthTest {
                 expected.put(3, set);
                 key.add(3);
                 break;
-
+            case 4:
+                text = "my dog likes to run and my other dog likes to walk and my fish likes to swim";
+                set = new HashSet<>();
+                set.add("my");
+                expected.put(3, set);
+                key.add(3);
+                set = new HashSet<>();
+                set.add("likes");
+                expected.put(3, set);
+                key.add(3);
+                set = new HashSet<>();
+                set.add("to");
+                expected.put(3, set);
+                key.add(3);
+                set = new HashSet<>();
+                set.add("and");
+                expected.put(2, set);
+                key.add(2);
+                set = new HashSet<>();
+                set.add("dog");
+                expected.put(2, set);
+                key.add(2);
+                set = new HashSet<>();
+                set.add("run");
+                set.add("other");
+                set.add("walk");
+                set.add("fish");
+                set.add("swim");
+                expected.put(1, set);
+                key.add(1);
+                break;
         }
     }
 
