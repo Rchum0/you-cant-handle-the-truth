@@ -1,4 +1,3 @@
-import com.sun.source.tree.Tree;
 import org.junit.Test;
 
 import java.util.*;
@@ -10,7 +9,7 @@ public class HandleTruthTest {
     public void makeshiftTest() {
         //HandleTruth.wordCount();
     }
-
+    @Test
     public void finalTest() {
         TreeMap<Integer, Set<String>> actual;
         TreeMap<Integer, Set<String>> expected = new TreeMap<>();
@@ -34,29 +33,17 @@ public class HandleTruthTest {
         String msg;
         switch (num) {
             case 1:
-                msg = "this is bad this is not bad it is not bad anymore";
+                msg = "fixing fixing fixing broken broken test";
                 set = new HashSet<>();
-                set.add("this");
-                expected.put(2, set);
-                key.add(2);
-                set = new HashSet<>();
-                set.add("is");
+                set.add("fixing");
                 expected.put(3, set);
                 key.add(3);
                 set = new HashSet<>();
-                set.add("bad");
-                expected.put(3, set);
-                key.add(3);
-                set = new HashSet<>();
-                set.add("not");
+                set.add("broken");
                 expected.put(2, set);
                 key.add(2);
                 set = new HashSet<>();
-                set.add("it");
-                expected.put(1, set);
-                key.add(1);
-                set = new HashSet<>();
-                set.add("anymore");
+                set.add("test");
                 expected.put(1, set);
                 key.add(1);
                 break;
@@ -82,48 +69,34 @@ public class HandleTruthTest {
                 key.add(3);
                 break;
             case 4:
-                msg = "my dog likes to run and my other dog likes to walk and my fish likes to swim";
+                msg = "y y y y y y y y y is is is is this this being difficult";
                 set = new HashSet<>();
-                set.add("my");
-                expected.put(3, set);
-                key.add(3);
+                set.add("y");
+                expected.put(9, set);
+                key.add(9);
                 set = new HashSet<>();
-                set.add("likes");
-                expected.put(3, set);
-                key.add(3);
+                set.add("is");
+                expected.put(4, set);
+                key.add(4);
                 set = new HashSet<>();
-                set.add("to");
-                expected.put(3, set);
-                key.add(3);
-                set = new HashSet<>();
-                set.add("and");
+                set.add("this");
                 expected.put(2, set);
                 key.add(2);
                 set = new HashSet<>();
-                set.add("dog");
-                expected.put(2, set);
-                key.add(2);
-                set = new HashSet<>();
-                set.add("run");
-                set.add("other");
-                set.add("walk");
-                set.add("fish");
-                set.add("swim");
+                set.add("being");
+                set.add("difficult");
                 expected.put(1, set);
                 key.add(1);
                 break;
             case 5:
-                msg = "hey hello hi bye good bye good night";
-                set = new HashSet<>();
-                set.add("good");
-                expected.put(2, set);
-                key.add(2);
+                msg = "hey hello hi bye good bye night";
                 set = new HashSet<>();
                 set.add("bye");
                 expected.put(2, set);
                 key.add(2);
                 set = new HashSet<>();
                 set.add("hey");
+                set.add("good");
                 set.add("hello");
                 set.add("hi");
                 set.add("night");
