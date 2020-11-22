@@ -112,6 +112,24 @@ public class HandleTruthTest {
                 expected.put(1, set);
                 key.add(1);
                 break;
+            case 5:
+                text = "hey hello hi bye good bye good night";
+                set = new HashSet<>();
+                set.add("good");
+                expected.put(2, set);
+                key.add(2);
+                set = new HashSet<>();
+                set.add("bye");
+                expected.put(2, set);
+                key.add(2);
+                set = new HashSet<>();
+                set.add("hey");
+                set.add("hello");
+                set.add("hi");
+                set.add("night");
+                expected.put(1, set);
+                key.add(1);
+                break;
         }
     }
 
