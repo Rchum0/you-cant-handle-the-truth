@@ -45,16 +45,20 @@ public class HandleTruthTest {
                 key.add(1);
                 break;
             case 3:
-                text = "hi hi hi hi hi hi hi";
+                text = "hi hi hi hi hi hi hi yes yes yes yes yes yes no no no";
                 set = new HashSet<>();
                 set.add("hi");
                 expected.put(7,set);
                 key.add(7);
                 set = new HashSet<>();
-                set.add("hi");
-                expected.put(7,set);
-                key.add(7);
-
+                set.add("yes");
+                expected.put(6,set);
+                key.add(6);
+                set = new HashSet<>();
+                set.add("no");
+                expected.put(3,set);
+                key.add(3);
+                break;
 
         }
     }
