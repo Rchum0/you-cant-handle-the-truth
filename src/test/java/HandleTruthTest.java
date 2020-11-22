@@ -130,7 +130,10 @@ public class HandleTruthTest {
                 expected.put(1, set);
                 key.add(1);
                 break;
+            default:
+                text = " ";
+                key.add(0);
         }
+        return text;
     }
-
 }
